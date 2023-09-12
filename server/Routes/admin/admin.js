@@ -60,7 +60,7 @@ router.post("/create", async (req, res) => {
 router.post("/update", (req, res) => {
     userModel.findOne({ username: req.body.username }).
         then(async (doc) => {
-            if (doc === {}) {
+            if (doc == {}) {
                 res.send({ message: "User does not exist" })
             }
             doc.password = req.body.password

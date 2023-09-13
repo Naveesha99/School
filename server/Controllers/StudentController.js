@@ -1,4 +1,4 @@
-const Author= require('../Models/StudentModel');
+const Student= require('../Models/StudentModel');
 
 module.exports.createStudent = async (req, res, next) => {
     try {
@@ -7,10 +7,10 @@ module.exports.createStudent = async (req, res, next) => {
         if (author) {
           return res.status(400).json({ message: "Student already exists" });
         }
-        const createStudent = await Student.create({ StudentID, StudentName, StudentEmail, Guardian ,createdAt });
+        const createdStudent = await Student.create({ StudentID, StudentName, StudentEmail, Guardian ,createdAt });
         res
           .status(201)
-          .json({ message: "Created the Student log successfully", success: true, createStudent });
+          .json({ message: "Created the Student log successfully", success: true, createdStudent });
       } catch (error) {
         console.error(error);
       }
@@ -55,7 +55,7 @@ module.exports.viewStudent = async (req, res, next) => {
         deletedStudent = await Student.findOneAndDelete({StudentID} );
         res
           .status(201)
-          .json({ message: "Student Record Deleted", success: true, deleteStudent });
+          .json({ message: "Student Record Deleted", success: true, deletedStudent });
       } catch (error) {
         console.error(error);
       }
@@ -79,10 +79,9 @@ module.exports.viewStudent = async (req, res, next) => {
   
       await student.save();
   
-      res.status(200).json({ message: "Student updated successfully", success: true, updateStudent: student });
+      res.status(200).json({ message: "Student updated successfully", success: true, updatedStudent: student });
     } catch (error) {
       console.error(error);
       res.status(500).json({ message: "Internal server error" });
     }
   };
-  

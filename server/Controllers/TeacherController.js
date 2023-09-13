@@ -1,4 +1,4 @@
-const Author= require('../Models/TeacherModel');
+const Teacher= require('../Models/TeacherModel');
 
 module.exports.createTeacher = async (req, res, next) => {
     try {
@@ -52,10 +52,10 @@ module.exports.viewTeacher = async (req, res, next) => {
         if (!teacher) {
           return res.status(400).json({ message: "Teacher not found" });
         }
-        deleteTeacher = await Teacher.findOneAndDelete({TeacherID} );
+        deletedTeacher = await Teacher.findOneAndDelete({TeacherID} );
         res
           .status(201)
-          .json({ message: "Teacher Record Deleted", success: true, deleteTeacher });
+          .json({ message: "Teacher Record Deleted", success: true, deletedTeacher });
       } catch (error) {
         console.error(error);
       }
@@ -79,7 +79,7 @@ module.exports.viewTeacher = async (req, res, next) => {
   
       await teacher.save();
   
-      res.status(200).json({ message: "Teacher updated successfully", success: true, updateTeacher: teacher });
+      res.status(200).json({ message: "Teacher updated successfully", success: true, updatedTeacher: teacher });
     } catch (error) {
       console.error(error);
       res.status(500).json({ message: "Internal server error" });

@@ -1,5 +1,5 @@
 const { createStaff, viewStaff, deleteStaff, updateStaff, getAllStaff } = 
-require ('../Controllers/ClassController');
+require ('../Controllers/StaffController');
 
 const router = require("express").Router();
 

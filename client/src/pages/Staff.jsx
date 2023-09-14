@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import "../styling/Student.css";
-import Dashboard from './Dashboard';
+import "../styling/Staff.css";
+//import Dashboard from './Dashboard';
 
 const StaffPage = () => {
     const [staff, setStaffMember] = useState([]);

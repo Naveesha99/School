@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import "../styling/Student.css";
-import Dashboard from './Dashboard';
+//import Dashboard from './Dashboard';
 
 const ClassPage = () => {
     const [classes, setClasses] = useState([]);

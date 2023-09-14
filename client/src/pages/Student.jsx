@@ -1,10 +1,8 @@
-<<<<<<< HEAD
-=======
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import "../styling/Student.css";
-import Dashboard from './Dashboard';
+//import Dashboard from './Dashboard';
 
 const StudentPage = () => {
     const [students, setStudents] = useState([]);
@@ -182,7 +180,7 @@ const StudentPage = () => {
                                 />
                                 <input
                                     type="text"
-                                    name="Name"
+                                    name="StudentName"
                                     placeholder="Student Name"
                                     value={newStudent.StudentName}
                                     onChange={handleChange}
@@ -214,4 +212,3 @@ const StudentPage = () => {
 };
 
 export default StudentPage;
->>>>>>> 94f1af0944aaeda929c9cb38c3b70ac8570e9326

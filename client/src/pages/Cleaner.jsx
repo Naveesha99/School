@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import "../styling/Cleaner.css";
-import Dashboard from './Dashboard';
+//import Dashboard from './Dashboard';
 
 const CleanerPage = () => {
     const [cleaner, setCleaner] = useState([]);
@@ -171,7 +171,7 @@ const CleanerPage = () => {
                                 />
                                 <input
                                     type="text"
-                                    name="Name"
+                                    name="CleanerName"
                                     placeholder="Cleaner Name"
                                     value={newCleaner.CleanerName}
                                     onChange={handleChange}

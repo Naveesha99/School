@@ -17,9 +17,14 @@ body::before {
 }
 
 h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: 1.8rem;
   color: #ffffff;
+  margin-bottom: 1rem;
+}
+h3 {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
 }
 
 .student-details {

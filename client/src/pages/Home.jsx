@@ -10,38 +10,43 @@ const Home = () => {
   const [username, setUsername] = useState("");
   useEffect(() => {
     const verifyCookie = async () => {
-      if (!cookies.token) {
-        navigate("/login");
-      }
+      // if (!cookies.token) {
+      //   navigate("/login");
+      // }
       const { data } = await axios.post(
         "http://localhost:4000",
         
         { withCredentials: true }
       );
-      // const { status, user } = data;
-      // setUsername(user);
-      // return status
-      //   ? toast(`Hello ${user}`, {
-      //       position: "top-right",
-      //     })
-      //   : (removeCookie("token"), navigate("/login"));
+      const { status, user } = data;
+      setUsername(user);
+      return status
+        ? toast(`Hello ${user}`, {
+          position: "top-right",
+        })
+        : (removeCookie("token"), navigate("/login"));
     };
-    verifyCookie();
+    //verifyCookie();
   }, [cookies, navigate, removeCookie]);
-  const Logout = () => {
+  const Continue = () => {
     removeCookie("token");
-    navigate("/signup");
+    navigate("/login");
   };
   return (
     <>
-      <div className="home_page">
-        <h4>
-          {" "}
-          Welcome <span>{username}</span>
-        </h4>
-        <button onClick={Logout}>LOGOUT</button>
+      <div className="home_page"align="center">
+        <div className="content" align="center">
+          <h2>
+            {" "}
+            Welcome to <br></br> GALENBODUNUWEWA NATIONAL SCHOOL
+          </h2>
+          <div>
+
+          </div>
+          <button onClick={Continue}>Get Started</button>
+        </div>
+        <ToastContainer />
       </div>
-      <ToastContainer />
     </>
   );
 };

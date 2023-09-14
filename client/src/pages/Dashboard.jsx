@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import "../styling/Dashboard.css";
-
+import { Axios } from "axios";
 export default function Dashboard() {
     return (
         <div>
@@ -15,31 +15,31 @@ export default function Dashboard() {
 
                 <div className="row">
                     <div className="col" align="center">
-                        <NavLink className="nav-link" to="/student">
+                        <NavLink className="nav-link" to="/Student">
                             <button className="btn btn-primary btn-lg btn-block">Student</button>
                         </NavLink>
                     </div>
 
                     <div className="col" align="center">
-                        <NavLink className="nav-link" to="/teacher">
+                        <NavLink className="nav-link" to="/Teacher">
                             <button className="btn btn-secondary btn-lg btn-block">Teacher</button>
                         </NavLink>
                     </div>
 
                     <div className="col" align="center">
-                        <NavLink className="nav-link" to="/class">
+                        <NavLink className="nav-link" to="/Class">
                             <button className="btn btn-success btn-lg btn-block">Class</button>
                         </NavLink>
                     </div>
 
                     <div className="col" align="center">
-                        <NavLink className="nav-link" to="/staff">
+                        <NavLink className="nav-link" to="/Staff">
                             <button className="btn btn-danger btn-lg btn-block">Staff</button>
                         </NavLink>
                     </div>
 
                     <div className="col" align="center">
-                        <NavLink className="nav-link" to="/cleaner">
+                        <NavLink className="nav-link" to="/Cleaner">
                             <button className="btn btn-warning btn-lg btn-block">Cleaner</button>
                         </NavLink>
                     </div>

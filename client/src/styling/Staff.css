@@ -13,8 +13,6 @@ h2 {
 h3 {
     font-size: 1.2rem;
     color: #ffffff;
-    margin-bottom: 1rem;
-}
 
 .staff-details {
     width: fit-content;
@@ -197,4 +195,3 @@ h3 {
   border-collapse: collapse;
   margin-top: 1rem;
   background-color: transparent;
-}

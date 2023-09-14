@@ -180,7 +180,7 @@ const CleanerPage = () => {
                                 <input
                                     type="text"
                                     name="CleanerContact"
-                                    placeholder="Cleaner Contact "
+                                    placeholder="CleanerContact "
                                     value={newCleaner.CleanerContact}
                                     onChange={handleChange}
                                 />

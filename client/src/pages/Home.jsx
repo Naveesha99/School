@@ -15,16 +15,16 @@ const Home = () => {
       }
       const { data } = await axios.post(
         "http://localhost:4000",
-        {},
+        
         { withCredentials: true }
       );
-      const { status, user } = data;
-      setUsername(user);
-      return status
-        ? toast(`Hello ${user}`, {
-            position: "top-right",
-          })
-        : (removeCookie("token"), navigate("/login"));
+      // const { status, user } = data;
+      // setUsername(user);
+      // return status
+      //   ? toast(`Hello ${user}`, {
+      //       position: "top-right",
+      //     })
+      //   : (removeCookie("token"), navigate("/login"));
     };
     verifyCookie();
   }, [cookies, navigate, removeCookie]);

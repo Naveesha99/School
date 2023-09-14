@@ -180,7 +180,7 @@ const StudentPage = () => {
                                 />
                                 <input
                                     type="text"
-                                    name="Name"
+                                    name="StudentName"
                                     placeholder="Student Name"
                                     value={newStudent.StudentName}
                                     onChange={handleChange}

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import "../styling/Student.css";
+import "../styling/Staff.css";
 import Dashboard from './Dashboard';
 
 const StaffPage = () => {

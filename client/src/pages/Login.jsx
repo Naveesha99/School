@@ -31,7 +31,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:4000/login",
+        "http://localhost:7000/login",
         {
           ...inputValue,
         },
@@ -83,8 +83,9 @@ const Login = () => {
         </div>
         <button type="submit">Submit</button>
         <span>
-          Already have an account? <Link to={"/signup"}>Signup</Link>
-        </span>
+  <span className="account-text">Doesn't have an account yet?</span>{" "}
+  <Link to={"/signup"}>Signup</Link>
+</span>
       </form>
       <ToastContainer />
     </div>

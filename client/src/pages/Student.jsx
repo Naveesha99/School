@@ -8,10 +8,9 @@ const StudentPage = () => {
     const [students, setStudents] = useState([]);
     const [newStudent, setNewStudent] = useState({
         StudentID: '',
-        Name: '',
-        Email: '',
+        StudentName: '',
+        StudentEmail: '',
         Guardian: '',
-        Created_date: '',
     });
     const [selectedStudent, setSelectedStudent] = useState(null);
     const [editMode, setEditMode] = useState(false);
@@ -48,10 +47,10 @@ const StudentPage = () => {
             await axios.post('/Students/create', newStudent);
             setNewStudent({
                 StudentID: '',
-                Name: '',
-                Email: '',
+
+                StudentName: '',
+                StudentEmail: '',
                 Guardian: '',
-                Created_date: '',
             });
             fetchStudents();
         } catch (error) {
@@ -107,7 +106,6 @@ const StudentPage = () => {
                             <th>Student Name</th>
                             <th>Student Email</th>
                             <th>Guardian</th>
-                            <th></th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -115,8 +113,8 @@ const StudentPage = () => {
                         {students.map((student) => (
                             <tr key={student.StudentID}>
                                 <td>{student.StudentID}</td>
-                                <td>{student.Name}</td>
-                                <td>{student.Email}</td>
+                                <td>{student.StudentName}</td>
+                                <td>{student.StudentEmail}</td>
                                 <td>{student.Guardian}</td>
                                 <td>
                                     <button onClick={() => handleDelete(student.StudentID)}>Delete</button>
@@ -143,22 +141,22 @@ const StudentPage = () => {
                                 />
                                 <input
                                     type="text"
-                                    name="Name"
+                                    name="StudentName"
                                     placeholder="Student Name"
-                                    value={selectedStudent.Name}
-                                    onChange={(e) => setSelectedStudent({ ...selectedStudent, Name: e.target.value })}
+                                    value={selectedStudent.StudentName}
+                                    onChange={(e) => setSelectedStudent({ ...selectedStudent, StudentName: e.target.value })}
                                 />
                                 <input
                                     type="text"
-                                    name="Email"
+                                    name="StudentEmail"
                                     placeholder="Student Email"
-                                    value={selectedStudent.Email}
-                                    onChange={(e) => setSelectedStudent({ ...selectedStudent, Email: e.target.value })}
+                                    value={selectedStudent.StudentEmail}
+                                    onChange={(e) => setSelectedStudent({ ...selectedStudent, StudentEmail: e.target.value })}
                                 />
                                 <input
                                     type="text"
                                     name="Guardian"
-                                    placeholder="Student Type"
+                                    placeholder="Guardian Type"
                                     value={selectedStudent.Guardian}
                                     onChange={(e) => setSelectedStudent({ ...selectedStudent, Guardian: e.target.value })}
                                 />
@@ -184,14 +182,14 @@ const StudentPage = () => {
                                     type="text"
                                     name="Name"
                                     placeholder="Student Name"
-                                    value={newStudent.Name}
+                                    value={newStudent.StudentName}
                                     onChange={handleChange}
                                 />
                                 <input
                                     type="text"
-                                    name="Email"
+                                    name="StudentEmail"
                                     placeholder="Student Email"
-                                    value={newStudent.Email}
+                                    value={newStudent.StudentEmail}
                                     onChange={handleChange}
                                 />
                                 <input

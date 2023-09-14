@@ -51,7 +51,7 @@ const TeacherPage = () => {
                 TeacherEmail: '',
                 Subject: '',
             });
-            fetchTeacher();
+            fetchTeachers();
         } catch (error) {
             console.error('Error creating teacher:', error);
         }
@@ -80,14 +80,14 @@ const TeacherPage = () => {
 
     const handleUpdateChange = (e) => {
         const { name, value } = e.target;
-        setSelectedAuthor((prev) => ({
+        setSelectedTeacher((prev) => ({
             ...prev,
             [name]: value,
         }));
     };
 
     const handleEditClick = (author) => {
-        setSelectedAuthor(author);
+        setSelectedTeacher(author);
         setEditMode(true);
     };
 
@@ -150,7 +150,7 @@ const TeacherPage = () => {
                                     name="TeacherEmails"
                                     placeholder="Teacher Emails"
                                     value={selectedTeacher.TeacherEmail}
-                                    onChange={(e) => setSelectedAuthor({ ...selectedTeacher, TeacherEmail: e.target.value })}
+                                    onChange={(e) => setSelectedTeacher({ ...selectedTeacher, TeacherEmail: e.target.value })}
                                 />
                                 <input
                                     type="text"

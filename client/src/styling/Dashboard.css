@@ -54,22 +54,26 @@
   }
   
   .btn-secondary {
+<<<<<<< HEAD
     background-color: #0088ff;
+=======
+    background-color: #007bff;
+>>>>>>> a3ea9065b5cac28f65a471cdae7716d64a88b56f
     color: white;
   }
   
   .btn-success {
-    background-color: #28a745;
+    background-color: #007bff;
     color: white;
   }
   
   .btn-danger {
-    background-color: #dc3545;
+    background-color: #007bff;
     color: white;
   }
   
   .btn-warning {
-    background-color: #ffc107;
+    background-color: #007bff;
     color: white;
   }
 

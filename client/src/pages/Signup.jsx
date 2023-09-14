@@ -94,8 +94,9 @@ const Signup = () => {
         </div>
         <button type="submit">Submit</button>
         <span>
-          Already have an account? <Link to={"/login"}>Login</Link>
-        </span>
+  <span className="account-text">Already have an account?</span>{" "}
+  <Link to={"/login"}>Login</Link>
+</span>
       </form>
       <ToastContainer />
     </div>

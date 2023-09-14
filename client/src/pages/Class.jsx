@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import "../styling/Student.css";
-//import Dashboard from './Dashboard';
+import "../styling/Class.css";
+import Dashboard from './Dashboard';
 
 const ClassPage = () => {
     const [classes, setClasses] = useState([]);
@@ -44,7 +44,7 @@ const ClassPage = () => {
         e.preventDefault();
         console.log(newClass);
         try {
-            await axios.post('/Classes/create', newClass);
+            await axios.post('/create', newClass);
             setNewClass({
                 ClassID: '',
                 ClassName: '',
@@ -59,7 +59,7 @@ const ClassPage = () => {
 
     const handleDelete = async (ClassID) => {
         try {
-            await axios.delete(`/Classe/delete/${ClassID}`);
+            await axios.delete(`/Class/delete/${ClassID}`);
             fetchClasses();
         } catch (error) {
             console.error('Error deleting class:', error);

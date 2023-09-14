@@ -147,7 +147,7 @@ const CleanerPage = () => {
                                 <input
                                     type="text"
                                     name="CleanerContact"
-                                    placeholder="Cleaner Type"
+                                    placeholder="Cleaner Contact"
                                     value={selectedCleaner.CleanerContact}
                                     onChange={(e) => setSelectedCleaner({ ...selectedCleaner, CleanerContact: e.target.value })}
                                 />

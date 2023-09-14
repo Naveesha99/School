@@ -47,6 +47,7 @@ const StudentPage = () => {
             await axios.post('/Students/create', newStudent);
             setNewStudent({
                 StudentID: '',
+
                 StudentName: '',
                 StudentEmail: '',
                 Guardian: '',
@@ -59,7 +60,7 @@ const StudentPage = () => {
 
     const handleDelete = async (StudentID) => {
         try {
-            await axios.delete(`/Teachers/delete/${StudentID}`);
+            await axios.delete(`/Students/delete/${StudentID}`);
             fetchStudents();
         } catch (error) {
             console.error('Error deleting student:', error);
